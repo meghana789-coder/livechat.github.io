@@ -94,15 +94,15 @@
 <!-- Contact Us Form -->
 <div class="card">
 <h2>Contact Us</h2>
-<button class="btn" onclick="openForm()">
+<button onclick="openForm()">
     Contact Us Form
 </button>
 
 <script>
 function openForm() {
-    sessionStorage.setItem("language", "en");
-    sessionStorage.setItem("brand", "Magnum");
-    sessionStorage.setItem("country", "US");
+    localStorage.setItem("language", "en");
+    localStorage.setItem("brand", "Magnum");
+    localStorage.setItem("country", "US");
 
     window.open("https://orgfarm-62b30aeaf8-dev-ed.develop.my.site.com/s/contact-us", "_blank");
 }
