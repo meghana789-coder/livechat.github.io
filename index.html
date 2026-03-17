@@ -94,11 +94,13 @@
 <!-- Contact Us Form -->
 <div class="card">
 <h2>Contact Us</h2>
-<a class="btn" 
-   href="https://orgfarm-62b30aeaf8-dev-ed.develop.my.site.com/s/contact-us"
-   target="_blank">
-   Contact Us Form
-</a>
+<form action="https://orgfarm-62b30aeaf8-dev-ed.develop.my.site.com/s/contact-us" method="POST" target="_blank">
+    <input type="hidden" name="language" value="en">
+    <input type="hidden" name="brand" value="Magnum">
+    <input type="hidden" name="country" value="US">
+    
+    <button type="submit" class="btn">Contact Us Form</button>
+</form>
 </div>
 </div>
 <footer>
