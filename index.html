@@ -93,14 +93,17 @@
 </div>
 <!-- Contact Us Form -->
 <div class="card">
-<h2>Contact Us</h2>
-<form action="https://orgfarm-62b30aeaf8-dev-ed.develop.my.site.com/s/contact-us" method="POST" target="_blank">
-    <input type="hidden" name="language" value="en">
-    <input type="hidden" name="brand" value="Magnum">
-    <input type="hidden" name="country" value="US">
-    
-    <button type="submit" class="btn">Contact Us Form</button>
-</form>
+<a href="#" onclick="openForm()">Contact Us</a>
+
+<script>
+function openForm() {
+    sessionStorage.setItem("language", "en");
+    sessionStorage.setItem("brand", "Magnum");
+    sessionStorage.setItem("country", "US");
+
+    window.open("https://orgfarm-62b30aeaf8-dev-ed.develop.my.site.com/s/contact-us", "_blank");
+}
+</script>
 </div>
 </div>
 <footer>
