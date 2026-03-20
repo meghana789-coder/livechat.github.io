@@ -100,11 +100,9 @@
 
 <script>
 function openForm() {
-    localStorage.setItem("language", "en");
-    localStorage.setItem("brand", "Magnum");
-    localStorage.setItem("country", "GB");
-
-    window.open("https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us", "_blank");
+    const url = "https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us" +
+                "?language=en&brand=Magnum&country=GB";
+    window.open(url, "_blank");
 }
 </script>
 </div>
