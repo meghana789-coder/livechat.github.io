@@ -94,14 +94,28 @@
 <!-- Contact Us Form -->
 <div class="card">
 <h2>Contact Us</h2>
-<iframe 
-    src="https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?language=EN&brand=Magnum&country=GB"
-    width="100%" 
-    height="600px"
-    style="border:none;">
-    
-    <p>Your browser does not support iframes.</p>
-</iframe>
+<button class="btn" onclick="openForm()">
+    Contact Us Form
+</button>
+
+<script>
+function openForm() {
+    const url = "https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us";
+    const newWindow = window.open(url, "_blank");
+    const data = {
+        language: 'EN',
+        brand: 'Magnum',
+        country: 'GB',
+        styles: {
+            primaryColor: '#ff6600',
+            fontFamily: 'Arial, sans-serif'
+        }
+    };
+    setTimeout(() => {
+        newWindow.postMessage(data, "https://energy-drive-7864--cecdev1.sandbox.my.site.com");
+    }, 2000); 
+}
+</script>
 </div>
 </div>
 <footer>
