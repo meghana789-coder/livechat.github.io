@@ -94,17 +94,14 @@
 <!-- Contact Us Form -->
 <div class="card">
 <h2>Contact Us</h2>
-<button class='btn' onclick="openForm()">
-    Contact Us Form
-</button>
-
-<script>
-function openForm() {
-    const url = "https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us" +
-                "?language=EN&brand=Magnum&country=GB";
-    window.open(url, "_blank");
-}
-</script>
+<iframe 
+    src="https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?language=EN&brand=Magnum&country=GB"
+    width="100%" 
+    height="600px"
+    style="border:none;">
+    
+    <p>Your browser does not support iframes.</p>
+</iframe>
 </div>
 </div>
 <footer>
