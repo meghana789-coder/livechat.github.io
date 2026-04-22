@@ -125,18 +125,20 @@ function openForm() {
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.language = 'en'; // For example, enter 'en' or 'en-US'
 
 			window.addEventListener("onEmbeddedMessagingReady", () => {
-		      embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Country": "UK"});
+		      embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"brand" : "Magnum", 
+                                                   "country" : "IN",  
+                                                   "language" : "English", });
 		     });
 
 			embeddedservice_bootstrap.init(
-				'00Dfj00000L6RFx',
-				'Live_Agent',
-				'https://orgfarm-62b30aeaf8-dev-ed.develop.my.site.com/ESWLiveAgent1772535765935',
+				'00D9X00000ZyO3J',
+				'CEC_Live_Chat',
+				'https://energy-drive-7864--cecdev1.sandbox.my.site.com/ESWCECLiveChat1776841198817',
 				{
-					scrt2URL: 'https://orgfarm-62b30aeaf8-dev-ed.develop.my.salesforce-scrt.com'
+					scrt2URL: 'https://energy-drive-7864--cecdev1.sandbox.my.salesforce-scrt.com'
 				}
 			);
 		} catch (err) {
