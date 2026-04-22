@@ -126,16 +126,14 @@ function openForm() {
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'fr';
-			embeddedservice_bootstrap.settings.prechatFields = {
-			    brand: "Magnum",
-			    country: "IN",
-			    language: "es"
-			};
 
-			//window.addEventListener("onEmbeddedMessagingReady", () => {
-	             //embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"brand":"Magnum","country":"IN","language":"fr"});
-		    //});
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+	             embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"brand":"Magnum","country":"IN","language":"fr"});
+		    });
 
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+			    embeddedservice_bootstrap.autoResponseAPI.setAutoResponseParameters({"UserLanguage": "fr-FR"});
+			});
 			embeddedservice_bootstrap.init(
 				'00D9X00000ZyO3J',
 				'CEC_Live_Chat',
