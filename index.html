@@ -127,10 +127,10 @@ function openForm() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en';
 
-			window.addEventListener("embeddedMessagingReady", () => {
-	             embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({Brand__c: "Magnum",
-				        Country__c: "IN",
-				        Language__c: "en"});
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+	             embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Brand": "Magnum",
+				        "Country": "IN",
+				        "Language": "en"});
 		    });
 			embeddedservice_bootstrap.init(
 				'00D9X00000ZyO3J',
