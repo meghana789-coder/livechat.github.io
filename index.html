@@ -127,8 +127,8 @@ function openForm() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'fr';
 
-			window.addEventListener("onEmbeddedMessagingReady", () => {
-	             embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"brand":"Magnum","country":"IN","language":"fr"});
+			window.addEventListener("embeddedMessagingReady", () => {
+	             embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Brand":"Magnum","Country":"IN","Language":"fr"});
 		    });
 			embeddedservice_bootstrap.init(
 				'00D9X00000ZyO3J',
