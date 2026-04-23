@@ -126,25 +126,19 @@ function openForm() {
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en';
+			window.addEventListener("onEmbeddedMessagingReady", () => {             
+                		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({  
+                                                   "Brand" : "Magnum", 
+                                                   "Country" : "IN",  
+                                                   "Language" : "en", 
+                                 }); 
 
-			// window.addEventListener("onEmbeddedMessagingReady", () => {
-	  //            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Brand": "Magnum",
-			// 	        "Country": "IN",
-			// 	        "Language": "en"});
-		 //    });
 			embeddedservice_bootstrap.init(
 				'00D9X00000ZyO3J',
 				'CEC_Live_Chat',
 				'https://energy-drive-7864--cecdev1.sandbox.my.site.com/ESWCECLiveChat1776841198817',
 				{
 					scrt2URL: 'https://energy-drive-7864--cecdev1.sandbox.my.salesforce-scrt.com'
-					prechatAPI: {
-						setHiddenPrechatFields: {
-							Brand: "Magnum",
-							Country: "IN",
-							Language: "en"
-						}
-					}
 				}
 			);
 		} catch (err) {
