@@ -125,21 +125,21 @@ function openForm() {
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US';
+			embeddedservice_bootstrap.settings.language = 'es';
 			window.addEventListener("onEmbeddedMessagingReady", () => {             
                 		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({  
                                                    "Brand" : "Magnum", 
-                                                   "Country" : "IN",  
-                                                   "Language" : "en_US", 
+                                                   "Country" : "US",  
+                                                   "Language" : "es", 
                                  }); 
 				}); 
 
 			embeddedservice_bootstrap.init(
-				'00D9X00000ZyO3J',
-				'CEC_Live_Chat',
-				'https://energy-drive-7864--cecdev1.sandbox.my.site.com/ESWCECLiveChat1776841198817',
+				'00D9O00000S7niD',
+				'CEC_Magnum_United_States_Spanish',
+				'https://tmicc--cecdevint.sandbox.my.site.com/ESWCECMagnumUnitedStat1778066290803',
 				{
-					scrt2URL: 'https://energy-drive-7864--cecdev1.sandbox.my.salesforce-scrt.com'
+					scrt2URL: 'https://tmicc--cecdevint.sandbox.my.salesforce-scrt.com'
 				}
 			);
 		} catch (err) {
@@ -147,6 +147,6 @@ function openForm() {
 		}
 	};
 </script>
-<script type='text/javascript' src='https://energy-drive-7864--cecdev1.sandbox.my.site.com/ESWCECLiveChat1776841198817/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://tmicc--cecdevint.sandbox.my.site.com/ESWCECMagnumUnitedStat1778066290803/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
