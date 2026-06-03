@@ -86,7 +86,6 @@
 <!-- Contact Us Form -->
 <div class="card">
 <h2>Contact Us</h2>
-<h2>Contact Us</h2>
 
 <button type="button" class="btn" onclick="openContactForm()">
     Contact Us Form
@@ -94,18 +93,15 @@
 
 <script>
 function openContactForm() {
-    const data = {
-        language: 'en_GB',
-        brand: 'Magnum',
-        country: 'GB'
-    };
-
-    const ctx = btoa(JSON.stringify(data));
+    const ctx = btoa(JSON.stringify({
+	    language: 'en_GB',
+	    brand: 'Magnum',
+	    country: 'GB'
+	}));
 
     const url =
         'https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?ctx=' +
         encodeURIComponent(ctx);
-
     window.open(url, '_blank');
 }
 </script>
