@@ -86,11 +86,29 @@
 <!-- Contact Us Form -->
 <div class="card">
 <h2>Contact Us</h2>
-<button
-    type="button" class="btn"
-    onclick="window.open('https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?language=en_GB&brand=Magnum&country=GB', '_blank')">
+<h2>Contact Us</h2>
+
+<button type="button" class="btn" onclick="openContactForm()">
     Contact Us Form
 </button>
+
+<script>
+function openContactForm() {
+    const data = {
+        language: 'en_GB',
+        brand: 'Magnum',
+        country: 'GB'
+    };
+
+    const ctx = btoa(JSON.stringify(data));
+
+    const url =
+        'https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?ctx=' +
+        encodeURIComponent(ctx);
+
+    window.open(url, '_blank');
+}
+</script>
 </div>
 </div>
 <footer>
