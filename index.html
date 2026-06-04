@@ -94,13 +94,12 @@
 <script>
 function openContactForm() {
     const ctx = btoa(JSON.stringify({
-	    language: 'en',
 	    brand: 'Ben & Jerry\'s',
 	    country: 'GB'
 	}));
 
     const url =
-        'https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?ctx=' +
+        'https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?language=fr&ctx=' +
         encodeURIComponent(ctx);
     window.open(url, '_blank');
 }
