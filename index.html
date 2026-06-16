@@ -95,11 +95,11 @@
 function openContactForm() {
     const ctx = btoa(JSON.stringify({
 	    brand: 'Magnum',
-	    country: 'GB'
+	    country: 'US'
 	}));
 
     const url =
-        'https://energy-drive-7864--cecdev1.sandbox.my.site.com/s/contact-us?language=en&ctx=' +
+        'https://tmicc--cectest.sandbox.my.site.com/s/contact-us?language=es&ctx=' +
         encodeURIComponent(ctx);
     window.open(url, '_blank');
 }
